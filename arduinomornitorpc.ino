@@ -112,7 +112,7 @@ void loop(){
   client.println(F("GET / HTTP/1.0"));
   char outBuf[100];
   sprintf(outBuf,"Host: %s",host);
-  client.printf(outBuf); 
+  client.println(outBuf); 
   client.println(F("Connection: close"));
   if (client.println() == 0) {
     Serial.println(F("Failed to send request"));
